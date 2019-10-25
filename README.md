@@ -3,29 +3,28 @@
 |------|----|-------|
 |email|string|null: false,unique: true|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 ### Association
-- has_many :tweetsテーブル
-- has many :user_groupテーブル
+- has_many :messages
+- has_many :groups
+- has_many :users_groups
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupename|string|null: false|
-|username|string||
-|user_id|integer|null:false, foreign_key: true|
+|name|string|null: false|
 ### Association
-- belong_to :userテーブル
-- has_many :tweetsテーブル
+- has_many :users,through:users_groups
+- has_many :messages
 
-## user_groupsテーブル
+## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false,foreign_key: true|
 |group_id|integer|null: false,foreign_key: true|
 ### Association
-- belong_to :usersテーブル
-- belong_to :groupテーブル
+- belongs_to :users
+- belongs_to :groups
 
 ## messagesテーブル
 |Column|Type|Options|
@@ -33,6 +32,7 @@
 |text|comment||
 |image|text||
 |user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :userテーブル
-- has_many  :groupテーブル
+- belongs_to :users
+- belongs_to :groups
