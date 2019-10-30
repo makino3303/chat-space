@@ -58,6 +58,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    erb2haml (0.1.5)
+      html2haml
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.11.1)
@@ -135,19 +137,11 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
     ruby_parser (3.14.0)
       sexp_processor (~> 4.9)
->>>>>>> Stashed changes
-=======
-    ruby_parser (3.14.0)
-      sexp_processor (~> 4.9)
->>>>>>> d83b8cf5b8c04e8d0d19d2a2f24826a8c51e5f3c
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -199,17 +193,10 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
   devise
+  erb2haml
   font-awesome-rails
   haml-rails
->>>>>>> Stashed changes
-=======
-  font-awesome-rails
-  haml-rails
->>>>>>> d83b8cf5b8c04e8d0d19d2a2f24826a8c51e5f3c
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
