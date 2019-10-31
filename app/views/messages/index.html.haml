@@ -1,0 +1,26 @@
+%body
+  %header.header
+    グループを作成しました
+  %div.block
+    %div.block__leftup
+      %div.block__box
+        %p.element__box__user-name chatspace
+        %ul.icon
+          %li.icon__box
+            %fa_icon.fa.fa-edit
+          %li.icon__box
+            %fa_icon.fa.fa-cog
+    %div.block__leftblock
+      
+  %div.block__content
+    %div.block__mainup 
+      %div.element#edit EDIT
+    %div.block__main
+
+  %div.block__bottom
+    %div.block__comment
+      %input.input-text{placeholder: "type a message"}/
+      %label.input-image
+        %fa_icon.fa.fa-image
+    %input.submit-btn{'data-disable-with': "Send", name: "commit", type: "submit", value: "Send"}/
+
