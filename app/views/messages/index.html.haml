@@ -1,0 +1,26 @@
+%body
+  %div.block
+    = render 'shared/side_bar'
+      
+  %div.block__content
+    %div.block__mainup 
+      %div.block__groupname
+        %h2.element__groupname__current-group data-group-id
+      %a(href="/groups/:id/edit")
+        %div.element#edit EDIT
+      %div.block__member
+        %p.element__member いいい
+    %div.block__main
+      .messages
+        = render @messages
+
+  %div.block__bottom
+    %div.block__comment
+      .form
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+          .form__mask
+            = f.label :image, class: 'form__mask__image' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'form__submit'

@@ -9,7 +9,7 @@
 
 .block{
   color: #ffffff;
-  height: calc(100vh - 25px);
+  height: 100vh;
   float: left;
 
   &__box{
@@ -17,6 +17,7 @@
     justify-content: space-between;
     width: 100%;
     font-weight: bold;
+    display: flex;
   }
 
   &__leftup{
@@ -32,13 +33,24 @@
     height: calc(100% - 100px);
     padding: 0 20px;
     background-color: #2f3e51;
+    overflow: scroll;
   }
 
   &__content{
     width: calc(100vw - 300px);
-    height: calc(100vh - 25px);
+    height: calc(100vh - 200px);
     float: left;
     }
+
+  &__groupname{
+    height: 20px;
+    padding: 35px 0 15px 40px;
+  }
+
+  &__member{
+    padding: 0 0 0 40px;
+    height: 12px;
+  }
 
   &__mainup{
     height: 100px;
@@ -49,8 +61,10 @@
 
 
   &__main{
+    padding: 46px;
     height: calc(100% - 100px);
     background-color: #fafafa;
+    overflow: scroll;
   }
 
   &__bottom{
@@ -62,15 +76,63 @@
     background-color: gray;
   }
 
-  &__comment{
-    width: 63%;
-    height: 50px;
-    left: 350px;
-    bottom: 25px;
-    position: fixed;
-    display: flex;
+}
+
+
+
+.message{
+  padding: 0 0 40px 0;
+}
+
+.upper-message{
+  display: flex;
+  line-height: 30px;
+
+
+  &__user-name{
+    font-size: 20px;
+  }
+
+
+  &__date{
+    font-size: 12px;
+    padding: 0 0 0 10px;
   }
 }
+.element__groupname{
+  color: #333333;
+}
+
+.element__member{
+  color: #999999;
+  font-size: 12px;
+}
+
+.form{
+  width: 65%;
+  height: 50px;
+  position: fixed;
+  left: 340px;
+  bottom: 25px;
+  display: flex;
+  background-color: pink
+}
+
+
+.form__message{
+    height: 50px;
+    width: 100%;
+    left: 350px;
+    bottom: 25px;
+    display: flex;
+}
+
+.new_message{
+  width: 100%;
+}
+
+
+
 
 #edit{
   width: 40px;
@@ -80,6 +142,7 @@
   padding: 0 20px;
   border: solid 1px;
   position: absolute;
+  top: 0px;
   right: 40px;
   margin-top: 28px;
 }
@@ -94,7 +157,7 @@ ul{
   display: flex;
 }
 
-.submit-btn{
+.form__submit{
   height: 50px;
   width: 6%;
   background-color: lightblue;
@@ -103,13 +166,16 @@ ul{
   right: 50px;
 }
 
-.input-text{
-  width: 100%;
-}
 
-.input-image{
+.form__mask__image{
   position: absolute;
+  width: 20px;
+  height: 20px;
   top: 10px;
   right: 10px;
   font-size: 20px;
+}
+
+.hidden{
+  visibility:hidden
 }
