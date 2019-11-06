@@ -1,6 +1,6 @@
 $(function(){
   function buildMessage(message){
-    let image = message.image.url ? `<img class="lower-message__image" src="${message.image.url}"></img>` : "" ;
+    let image = message.image ? `<img class="lower-message__image" src="${message.image}"></img>` : "" ;
     var html = `<div class="message">
                   <div class="upper-message">
                     <div class="upper-message__user-name">
