@@ -1,5 +1,4 @@
 $(function(){
-
   function buildMessage(message){
     let image = message.image.url ? `<img class="lower-message__image" src="${message.image.url}"></img>` : "" ;
     var html = `<div class="message">
@@ -20,7 +19,6 @@ $(function(){
                 </div>`
     return html;
   }
-
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -37,12 +35,13 @@ $(function(){
       var html = buildMessage(message);
       $('.messages').append(html)
       $('.block__main').animate({ scrollTop: $('.block__main')[0].scrollHeight});
-      $('.form__submit').prop( 'disabled', false )
       $('form')[0].reset();
     })
     .fail(function(){
-      $('.form__submit').prop( 'disabled', false )
       alert("メッセージ送信に失敗しました");
+    })
+    .always(function(){
+      $('.form__submit').prop( 'disabled', false )
     })
   })
 });
