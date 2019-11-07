@@ -64,6 +64,8 @@ gem 'devise'
 gem 'erb2haml'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'jquery-rails'
+gem 'pry-rails'
 
 group :test, :development do
   gem 'capybara'
