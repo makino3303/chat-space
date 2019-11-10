@@ -1,7 +1,7 @@
 $(function(){
   function buildMessage(message){
     let image = message.image ? `<img class="lower-message__image" src="${message.image}"></img>` : "" ;
-    var html = `<div class="message" data-id=` + message.id + `>
+    var html = `<div class="message" data-id=${message.id}>
                   <div class="upper-message">
                     <div class="upper-message__user-name">
                       ${message.username}
@@ -56,7 +56,6 @@ $(function(){
         data: {last_id: last_message_id}
       })
       .done(function (messages) {
-        console.log(messages)
         var insertHTML = '';
         messages.forEach(function (message) {
           insertHTML = buildMessage(message);
@@ -65,7 +64,7 @@ $(function(){
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       })
       .fail(function() {
-        console.log("失敗")
+        alert("更新に失敗しました");
       });
     }
   };
