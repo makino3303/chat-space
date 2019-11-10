@@ -3,7 +3,6 @@
   width: 100%;
   background-color: #38AEF0;
   color: #ffffff;
-  text-align: center;
   line-height: 25px;
 }
 
@@ -44,16 +43,23 @@
 
   &__groupname{
     height: 20px;
-    padding: 35px 0 15px 40px;
+    padding: 35px 0 15px 0;
   }
 
   &__member{
-    padding: 0 0 0 40px;
-    height: 12px;
+    font-size: 12px;
+    padding: 10px 10px 0 0;
+    color: #999999;
+  }
+
+  &__memberlist{
+    color: #999999;
+    margin: 0 5px;
   }
 
   &__mainup{
     height: 100px;
+    margin: 0 40px;
     background-color: #ffffff;
     border-bottom: solid 1px;
     color: #eeeeee;
@@ -78,7 +84,9 @@
 
 }
 
-
+.header__name{
+  
+}
 
 .message{
   padding: 0 0 40px 0;
@@ -99,7 +107,8 @@
     padding: 0 0 0 10px;
   }
 }
-.element__groupname{
+.element__groupname__current-group{
+  font-size: 20px;
   color: #333333;
 }
 
