@@ -5,11 +5,16 @@
   %div.block__content
     %div.block__mainup 
       %div.block__groupname
-        %h2.element__groupname__current-group data-group-id
-      %a(href="/groups/:id/edit")
-        %div.element#edit EDIT
-      %div.block__member
-        %p.element__member いいい
+        %h2.element__groupname__current-group 
+          = @group.name
+      %div.element#edit
+        = link_to edit_group_path(@group) do
+          = 'EDIT'
+      %ul.block__member 
+        Member:
+        - @group.users.each do |user|
+          %li.block__memberlist 
+            = user.name
     %div.block__main
       .messages
         = render @messages
