@@ -56,16 +56,14 @@ $(function(){
         data: {last_id: last_message_id}
       })
       .done(function (messages) {
-        console.log(messages)
         var insertHTML = '';
         messages.forEach(function (message) {
           insertHTML = buildMessage(message);
           $('.messages').append(insertHTML);
+          $('.block__main').animate({scrollTop: $('.block__main')[0].scrollHeight}, 'fast');
         })
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       })
       .fail(function() {
-        console.log("失敗")
         alert("更新に失敗しました");
       });
     }
